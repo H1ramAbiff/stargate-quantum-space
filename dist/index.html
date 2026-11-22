@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Quantum interface concept for spatial signal navigation." />
+    <title>Q-Space Interface</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="Q-Space home"><span class="brand-mark"></span>Q-SPACE</a>
+        <p class="system-state"><span></span> SYSTEMS NOMINAL</p>
+        <button class="quiet-button" id="modeButton" type="button">INTERFACE: LIVE</button>
+      </header>
+
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">EXPERIMENTAL NAVIGATION CONSOLE</p>
+          <h1>Navigate the<br /><em>quantum field.</em></h1>
+          <p class="lede">A spatial interface for observing phase alignment, energy coherence, and live coordinate patterns.</p>
+          <div class="hero-actions">
+            <button class="primary-button" id="engageButton" type="button">Engage field</button>
+            <a class="text-link" href="#console">Open console</a>
+          </div>
+        </div>
+
+        <div class="field-wrap" aria-label="Animated quantum field visualization" role="img">
+          <div class="field-grid"></div>
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+          <div class="core"><span></span></div>
+          <div class="field-label label-a">PHASE 01</div>
+          <div class="field-label label-b">VECTOR 7.23</div>
+          <div class="field-label label-c">∆ COHERENCE</div>
+        </div>
+      </section>
+
+      <section class="metrics" aria-label="Live field metrics">
+        <article><p>Coherence</p><strong id="coherence">98.4<span>%</span></strong><small>+0.8% stable</small></article>
+        <article><p>Field depth</p><strong id="depth">4.72<span> ql</span></strong><small>within target range</small></article>
+        <article><p>Signal drift</p><strong id="drift">0.003<span> hz</span></strong><small>minimal variance</small></article>
+        <article><p>Coordinates</p><strong>07<span>/</span>24</strong><small>sequence selected</small></article>
+      </section>
+
+      <section class="console" id="console">
+        <div class="console-intro"><p class="eyebrow">CONTROL LAYER</p><h2>Shape the<br />signal.</h2><p>Adjust the interface variables to create a new field configuration.</p></div>
+        <form class="controls" id="fieldForm">
+          <label>Phase offset <output id="phaseOutput">42°</output><input id="phase" type="range" min="0" max="100" value="42" /></label>
+          <label>Field intensity <output id="intensityOutput">68%</output><input id="intensity" type="range" min="0" max="100" value="68" /></label>
+          <label>Signal mode
+            <select id="signalMode"><option>Harmonic</option><option>Resonant</option><option>Exploratory</option></select>
+          </label>
+          <button class="primary-button" type="submit">Commit configuration</button>
+          <p class="form-status" id="formStatus" aria-live="polite">Configuration ready.</p>
+        </form>
+      </section>
+    </main>
+    <footer><span>Q-SPACE / 01</span><span>CONCEPT INTERFACE</span><span id="clock"></span></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
